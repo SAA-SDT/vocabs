@@ -43,18 +43,21 @@ levels:series
 levels:subfonds
     a skos:Concept;
     skos:prefLabel "subfonds"@en;
+    skos:altLabel "sub-fonds"@en;
     skos:topConceptOf levels:descriptionLevels;
     skos:historyNote "Original source: EAD 2002 schema"@en .
 
 levels:subgroup
     a skos:Concept;
     skos:prefLabel "subgroup"@en;
+    skos:altLabel "sub-group"@en;
     skos:topConceptOf levels:descriptionLevels;
     skos:historyNote "Original source: EAD 2002 schema; original term: 'subgrp'"@en .
 
 levels:subseries
     a skos:Concept;
     skos:prefLabel "subseries"@en;
+    skos:altLabel "sub-series"@en;
     skos:topConceptOf levels:descriptionLevels;
     skos:historyNote "Original source: EAD 2002 schema"@en .
 
