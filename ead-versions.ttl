@@ -5,11 +5,11 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>
-@prefix eadv: <https://github.com/SAA-SDT/vocabs/raw/levels/ead-versions.ttl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix eadv: <https://raw.github.com/SAA-SDT/vocabs/levels/ead-versions.ttl#> .
 
 eadv:eadVersions
-    a skos:ConceptScheme;
+    a skos:ConceptScheme ;
     dct:title "Encoded Archival Description version information"@en ;
     dct:creator eadv:sdt .
 
@@ -27,7 +27,7 @@ eadv:ead
     skos:closeMatch dbpedia:Encoded_Archival_Description ;
     doap:homepage <http://www.loc.gov/ead/> ;
     doap:release eadv:eadbeta ;
-    doap:release eadv:ead1.0 ;
+    doap:release eadv:ead1 ;
     doap:release eadv:ead2002 ;
     doap:maintainer eadv:sdt .
 
@@ -42,7 +42,7 @@ eadv:eadbeta
         doap:name "beta" 
     ] .
 
-eadv:ead1.0
+eadv:ead1
     a skos:Concept ;
     a doap:release ;
     skos:broader eadv:ead ; 
@@ -53,7 +53,6 @@ eadv:ead1.0
         doap:revision "1.0" 
     ] ;
     skos:closeMatch <urn:publicid:-:Society+of+American+Archivists:DTD+ead.dtd+(Encoded Archival Description+(EAD)+Version+1.0):EN> .
-    .
 
 eadv:ead2002
     a skos:Concept ;
@@ -64,7 +63,7 @@ eadv:ead2002
     skos:altLabel "EAD 2002" ;
     doap:Version [
         doap:name "EAD 2002"
-    ] 
+    ] ;
     skos:closeMatch <urn:isbn:1-931666-00-8> ;
     skos:closeMatch <urn:publicid:%2B:ISBN+1-931666-00-8:DTD+ead.dtd+(Encoded+Archival+Description+(EAD)+Version 2002):EN> .
 

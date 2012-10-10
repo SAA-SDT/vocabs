@@ -4,8 +4,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
-@prefix levels: <https://github.com/SAA-SDT/vocabs/raw/levels/levels.ttl#> .
-@prefix eadv: <https://github.com/SAA-SDT/vocabs/raw/levels/ead-versions.ttl#> .
+@prefix levels: <https://raw.github.com/SAA-SDT/vocabs/levels/levels.ttl#> .
+@prefix eadv: <https://raw.github.com/SAA-SDT/vocabs/levels/ead-versions.ttl#> .
 levels:descriptionLevels
     a skos:ConceptScheme;
     dct:title "Levels of Archival Description"@en;
@@ -15,28 +15,28 @@ levels:collection
     a skos:Concept;
     skos:prefLabel "collection"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
 
 levels:fonds
     a skos:Concept;
     skos:prefLabel "fonds"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
 
 levels:class
     a skos:Concept;
     skos:prefLabel "class"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
 
 levels:recordGroup
     a skos:Concept;
     skos:prefLabel "record group"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute; original term: 'recordgrp'"@en .
 
 levels:recordgrp
@@ -46,7 +46,7 @@ levels:series
     a skos:Concept;
     skos:prefLabel "series"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
 
 levels:subfonds
@@ -54,7 +54,7 @@ levels:subfonds
     skos:prefLabel "subfonds"@en;
     skos:altLabel "sub-fonds"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
 
 levels:subgroup
@@ -62,7 +62,7 @@ levels:subgroup
     skos:prefLabel "subgroup"@en;
     skos:altLabel "sub-group"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute; original term: 'subgrp'"@en .
 
 levels:subgrp
@@ -73,19 +73,19 @@ levels:subseries
     skos:prefLabel "subseries"@en;
     skos:altLabel "sub-series"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
 
 levels:file
     a skos:Concept;
     skos:prefLabel "file"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
 
 levels:item
     a skos:Concept;
     skos:prefLabel "item"@en;
     skos:topConceptOf levels:descriptionLevels;
-    dct:source eadv:ead2002 .
+    dct:source eadv:ead2002 ;
     skos:historyNote "Adapted from @level attribute"@en .
