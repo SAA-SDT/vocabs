@@ -1,0 +1,60 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix levels: <http://saa-sdt.github.com/vocabs/levels#> .
+
+levels:descriptionLevels rdf:type skos:ConceptScheme;
+    dct:title "Levels of Archival Description"@en;
+    dct:creator "Society of American Archivists Schema Development Team"@en .
+
+levels:collection rdf:type skos:Concept;
+    skos:prefLabel "collection"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
+
+levels:fonds rdf:type skos:Concept;
+    skos:prefLabel "fonds"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
+
+levels:class rdf:type skos:Concept;
+    skos:prefLabel "class"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
+
+levels:recordGroup rdf:type skos:Concept;
+    skos:prefLabel "record group"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema; original term: 'recordgrp'"@en .
+
+levels:series rdf:type skos:Concept;
+    skos:prefLabel "series"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
+
+levels:subfonds rdf:type skos:Concept;
+    skos:prefLabel "subfonds"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
+
+levels:subgroup rdf:type skos:Concept;
+    skos:prefLabel "subgroup"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema; original term: 'subgrp'"@en .
+
+levels:subseries rdf:type skos:Concept;
+    skos:prefLabel "subseries"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
+
+levels:file rdf:type skos:Concept;
+    skos:prefLabel "file"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
+
+levels:item rdf:type skos:Concept;
+    skos:prefLabel "item"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    skos:historyNote "Original source: EAD 2002 schema"@en .
