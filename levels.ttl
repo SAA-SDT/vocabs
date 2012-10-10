@@ -3,72 +3,89 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix levels: <http://saa-sdt.github.com/vocabs/levels#> .
-
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix levels: <https://github.com/SAA-SDT/vocabs/raw/levels/levels.ttl#> .
+@prefix eadv: <https://github.com/SAA-SDT/vocabs/raw/levels/ead-versions.ttl#> .
 levels:descriptionLevels
     a skos:ConceptScheme;
     dct:title "Levels of Archival Description"@en;
-    dct:creator "Society of American Archivists Schema Development Team"@en .
+    dct:creator eadv:sdt .
 
 levels:collection
     a skos:Concept;
     skos:prefLabel "collection"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
 
 levels:fonds
     a skos:Concept;
     skos:prefLabel "fonds"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
 
 levels:class
     a skos:Concept;
     skos:prefLabel "class"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
 
 levels:recordGroup
     a skos:Concept;
     skos:prefLabel "record group"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema; original term: 'recordgrp'"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute; original term: 'recordgrp'"@en .
+
+levels:recordgrp
+    owl:sameAs levels:recordGroup .
 
 levels:series
     a skos:Concept;
     skos:prefLabel "series"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
 
 levels:subfonds
     a skos:Concept;
     skos:prefLabel "subfonds"@en;
     skos:altLabel "sub-fonds"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
 
 levels:subgroup
     a skos:Concept;
     skos:prefLabel "subgroup"@en;
     skos:altLabel "sub-group"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema; original term: 'subgrp'"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute; original term: 'subgrp'"@en .
+
+levels:subgrp
+    owl:sameAs levels:subgroup .
 
 levels:subseries
     a skos:Concept;
     skos:prefLabel "subseries"@en;
     skos:altLabel "sub-series"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
 
 levels:file
     a skos:Concept;
     skos:prefLabel "file"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
 
 levels:item
     a skos:Concept;
     skos:prefLabel "item"@en;
     skos:topConceptOf levels:descriptionLevels;
-    skos:historyNote "Original source: EAD 2002 schema"@en .
+    dct:source eadv:ead2002 .
+    skos:historyNote "Adapted from @level attribute"@en .
