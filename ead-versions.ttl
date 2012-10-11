@@ -1,0 +1,82 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix eadv: <https://raw.github.com/SAA-SDT/vocabs/master/ead-versions.ttl#> .
+
+eadv:eadVersions
+    a skos:ConceptScheme ;
+    dct:title "Encoded Archival Description version information"@en ;
+    dct:creator eadv:sdt .
+
+eadv:sdt 
+    a foaf:Organization ;
+    foaf:name "Society of American Archivists Schema Development Team" ;
+    foaf:homepage <http://saa.archivists.org/4DCGI/committees/SAACS-SDTDRT.html?Action=Show_Comm_Detail&amp;CommCode=SAA**CS-SDTDRT> .
+
+eadv:ead
+    a skos:Concept ;
+    a doap:Project ; 
+    skos:topConceptOf eadv:eadVersions ;
+    skos:prefLabel "Encoded Archival Description"@en ;
+    skos:altLabel "EAD" ;
+    skos:closeMatch dbpedia:Encoded_Archival_Description ;
+    doap:homepage <http://www.loc.gov/ead/> ;
+    doap:release eadv:eadbeta ;
+    doap:release eadv:ead1 ;
+    doap:release eadv:ead2002 ;
+    doap:maintainer eadv:sdt .
+
+eadv:eadbeta 
+    a skos:Concept ;
+    a doap:release ;
+    skos:broader eadv:ead ;
+    skos:inScheme eadv:eadVersions ;
+    skos:prefLabel "Encoded Archival Description Beta"@en ;
+    skos:altLabel "EAD Beta" ;
+    doap:Version [
+        doap:name "beta" 
+    ] .
+
+eadv:ead1
+    a skos:Concept ;
+    a doap:release ;
+    skos:broader eadv:ead ; 
+    skos:inScheme eadv:eadVersions ;
+    skos:prefLabel "Encoded Archival Description 1.0"@en ;
+    skos:altLabel "EAD 1.0" ;
+    doap:Version [
+        doap:revision "1.0" 
+    ] ;
+    skos:closeMatch <urn:publicid:-:Society+of+American+Archivists:DTD+ead.dtd+(Encoded Archival Description+(EAD)+Version+1.0):EN> .
+
+eadv:ead2002
+    a skos:Concept ;
+    a doap:Release ;
+    skos:broader eadv:ead ;
+    skos:inScheme eadv:eadVersions ;
+    skos:prefLabel "Encoded Archival Description 2002"@en ;
+    skos:altLabel "EAD 2002" ;
+    doap:Version [
+        doap:name "EAD 2002"
+    ] ;
+    skos:closeMatch <urn:isbn:1-931666-00-8> ;
+    skos:closeMatch <urn:publicid:%2B:ISBN+1-931666-00-8:DTD+ead.dtd+(Encoded+Archival+Description+(EAD)+Version 2002):EN> .
+
+eadv:ead2002schema 
+    a skos:Concept ;
+    skos:broader eadv:ead2002 ; 
+    skos:inScheme eadv:eadVersions ; 
+    skos:prefLabel "Encoded Archival Description 2002 Schema"@en ;
+    skos:altLabel "EAD 2002 Schema" .
+
+eadv:ead2002dtd 
+    a skos:Concept ;
+    skos:broader eadv:ead2002 ; 
+    skos:inScheme eadv:eadVersions ; 
+    skos:prefLabel "Encoded Archival Description 2002 DTD"@en ;
+    skos:altLabel "EAD 2002 DTD" .

@@ -1,0 +1,115 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locah: <http://data.archiveshub.ac.uk/def/> .
+@prefix levels: <https://raw.github.com/SAA-SDT/vocabs/master/levels.ttl#> .
+@prefix eadv: <https://raw.github.com/SAA-SDT/vocabs/master/ead-versions.ttl#> .
+
+levels:descriptionLevels
+    a skos:ConceptScheme ;
+    dct:title "Levels of Archival Description"@en;
+    dct:creator eadv:sdt ;
+    skos:hasTopConcept levels:collection ; 
+    skos:hasTopConcept levels:fonds ; 
+    skos:hasTopConcept levels:class ; 
+    skos:hasTopConcept levels:recordGroup ; 
+    skos:hasTopConcept levels:series ;
+    skos:hasTopConcept levels:subfonds ;
+    skos:hasTopConcept levels:subgroup ; 
+    skos:hasTopConcept levels:subseries ;
+    skos:hasTopConcept levels:file ; 
+    skos:hasTopConcept levels:item .
+
+levels:collection
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "collection"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
+
+levels:fonds
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "fonds"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
+
+levels:class
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "class"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
+
+levels:recordGroup
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "record group"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute; original term: 'recordgrp'"@en .
+
+levels:recordgrp
+    owl:sameAs levels:recordGroup .
+
+levels:series
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "series"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
+
+levels:subfonds
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "subfonds"@en;
+    skos:altLabel "sub-fonds"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
+
+levels:subgroup
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "subgroup"@en;
+    skos:altLabel "sub-group"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute; original term: 'subgrp'"@en .
+
+levels:subgrp
+    owl:sameAs levels:subgroup .
+
+levels:subseries
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "subseries"@en;
+    skos:altLabel "sub-series"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
+
+levels:file
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "file"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
+
+levels:item
+    a skos:Concept;
+    a locah:Level ;
+    skos:prefLabel "item"@en;
+    skos:topConceptOf levels:descriptionLevels;
+    dct:source eadv:ead2002 ;
+    skos:historyNote "Adapted from @level attribute"@en .
