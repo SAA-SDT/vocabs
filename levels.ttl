@@ -4,15 +4,28 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix locah: <http://data.archiveshub.ac.uk/def/> .
 @prefix levels: <https://raw.github.com/SAA-SDT/vocabs/levels/levels.ttl#> .
 @prefix eadv: <https://raw.github.com/SAA-SDT/vocabs/levels/ead-versions.ttl#> .
+
 levels:descriptionLevels
-    a skos:ConceptScheme;
+    a skos:ConceptScheme ;
     dct:title "Levels of Archival Description"@en;
-    dct:creator eadv:sdt .
+    dct:creator eadv:sdt ;
+    skos:hasTopConcept levels:collection ; 
+    skos:hasTopConcept levels:fonds ; 
+    skos:hasTopConcept levels:class ; 
+    skos:hasTopConcept levels:recordGroup ; 
+    skos:hasTopConcept levels:series ;
+    skos:hasTopConcept levels:subfonds ;
+    skos:hasTopConcept levels:subgroup ; 
+    skos:hasTopConcept levels:subseries ;
+    skos:hasTopConcept levels:file ; 
+    skos:hasTopConcept levels:item .
 
 levels:collection
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "collection"@en;
     skos:topConceptOf levels:descriptionLevels;
     dct:source eadv:ead2002 ;
@@ -20,6 +33,7 @@ levels:collection
 
 levels:fonds
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "fonds"@en;
     skos:topConceptOf levels:descriptionLevels;
     dct:source eadv:ead2002 ;
@@ -27,6 +41,7 @@ levels:fonds
 
 levels:class
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "class"@en;
     skos:topConceptOf levels:descriptionLevels;
     dct:source eadv:ead2002 ;
@@ -34,6 +49,7 @@ levels:class
 
 levels:recordGroup
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "record group"@en;
     skos:topConceptOf levels:descriptionLevels;
     dct:source eadv:ead2002 ;
@@ -44,6 +60,7 @@ levels:recordgrp
 
 levels:series
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "series"@en;
     skos:topConceptOf levels:descriptionLevels;
     dct:source eadv:ead2002 ;
@@ -51,6 +68,7 @@ levels:series
 
 levels:subfonds
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "subfonds"@en;
     skos:altLabel "sub-fonds"@en;
     skos:topConceptOf levels:descriptionLevels;
@@ -59,6 +77,7 @@ levels:subfonds
 
 levels:subgroup
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "subgroup"@en;
     skos:altLabel "sub-group"@en;
     skos:topConceptOf levels:descriptionLevels;
@@ -70,6 +89,7 @@ levels:subgrp
 
 levels:subseries
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "subseries"@en;
     skos:altLabel "sub-series"@en;
     skos:topConceptOf levels:descriptionLevels;
@@ -78,6 +98,7 @@ levels:subseries
 
 levels:file
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "file"@en;
     skos:topConceptOf levels:descriptionLevels;
     dct:source eadv:ead2002 ;
@@ -85,6 +106,7 @@ levels:file
 
 levels:item
     a skos:Concept;
+    a locah:Level ;
     skos:prefLabel "item"@en;
     skos:topConceptOf levels:descriptionLevels;
     dct:source eadv:ead2002 ;
